@@ -14,8 +14,6 @@ import android.webkit.WebView;
 
 /**
  * @author: Shay-Patrick-Cormac
- * @email: fang47881@126.com
- * @ltd: 金螳螂企业（集团）有限公司
  * @date: 2017/12/20 14:16
  * @version: 1.0
  * @description: 加载webiview，降低灵敏度

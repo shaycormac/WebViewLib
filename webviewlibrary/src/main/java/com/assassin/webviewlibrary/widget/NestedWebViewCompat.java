@@ -21,6 +21,7 @@ import android.webkit.WebView;
  * <p>
  * WebView compatible with CoordinatorLayout.
  * The implementation based on NestedScrollView of design library
+ * 参照网上一位外国人写的Webview,并在基础上添加了前端将高度设置为0的时候的一种解决方式。
  */
 public class NestedWebViewCompat extends WebView implements NestedScrollingChild, 
         NestedScrollingParent {
