@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="rc_external_path"
+        path="." />
+    <external-path
+        name="shit"
+        path="Download/" />
+</paths>

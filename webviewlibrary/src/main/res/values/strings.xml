@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">WebViewLibrary</string>
+    <string name="permission_explain">你已拒绝访问%1$s权限,请前往设置中心打开权限</string>
+</resources>

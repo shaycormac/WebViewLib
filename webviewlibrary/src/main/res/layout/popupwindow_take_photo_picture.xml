@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000">
+
+    <LinearLayout
+        android:id="@+id/ll_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#e0e0e0" />
+
+
+        <Button
+            android:id="@+id/itemCamera"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?selectableItemBackground"
+            android:text="拍照"
+            android:textColor="#262626"
+            android:textSize="16sp" />
+
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#e0e0e0" />
+
+
+        <Button
+            android:id="@+id/itemPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?selectableItemBackground"
+            android:text="从相册中选取"
+            android:textColor="#262626"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#99000000" />
+
+        <Button
+            android:id="@+id/itemCancel"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="?selectableItemBackground"
+            android:text="取消"
+            android:textColor="#262626"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>
