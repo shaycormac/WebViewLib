@@ -269,18 +269,15 @@ public class DownloadUtil {
             intent.addCategory("android.intent.category.DEFAULT");
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             //注意type为apk，7.0的适配
-            if ("application/vnd.android.package-archive".equals(type) && Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            Uri uri;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) 
+            {
                 intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-            }
-
-            Uri uri = null;
-            //uri兼容性处理
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 uri = FileProvider.getUriForFile(pContext,  "com.assassin.webviewdemo.FileProvider", file);
-            } else {
+            }else 
+            {
                 uri = Uri.fromFile(file);
             }
-            
             intent.setDataAndType(uri, type);
             //校验一下intent
             boolean hasIntentExist = pContext.getPackageManager().queryIntentActivities

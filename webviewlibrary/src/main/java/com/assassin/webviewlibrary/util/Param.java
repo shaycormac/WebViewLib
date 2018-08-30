@@ -35,4 +35,11 @@ public class Param
         public static final int FILE_CHOOSER = 101;
         public static final int TAKE_PHOTO_RESULTCODE = 102;
     }
+
+
+    public static class LOCAL {
+        public static final String TOKEN = "TOKEN";  //后台的token令牌。
+        //点击进入H5页面的当前时间
+        public static final String CLICK_H5_SHORT_CUT = "CLICK_H5_SHORT_CUT";
+    }
 }

@@ -1,15 +1,13 @@
 package com.assassin.webviewlibrary.provider;
 
 
-import com.assassin.webviewlibrary.BuildConfig;
-
 /**
  * Created by l4656_000 on 2015/11/30.
  */
 public class SPConstant {
     // normal constants
     public static final String CONTENT="content://";
-    public static final String AUTHORITY= BuildConfig.APPLICATION_ID;
+    public static final String AUTHORITY= "com.assassin.webview";
     public static final String SEPARATOR= "/";
     public static final String CONTENT_URI =CONTENT+AUTHORITY;
     public static final String TYPE_STRING_SET="string_set";

@@ -36,4 +36,19 @@
             android:textSize="14sp" />
     </android.support.design.widget.TextInputLayout>
 
+   
+        
+        <Button
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp" 
+            android:id="@+id/shapeButton"
+            android:text="测试自定义shape文件"/>
+    
 </android.support.constraint.ConstraintLayout>

@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.webkit.JavascriptInterface;
 
+import com.assassin.webviewlibrary.provider.SPHelper;
+
 /**
  * WebView中用来跟页面交互js的类,其中的方法,
  * 可以在页面上通过{@link WebViewJSInterface#NAME}.方法名(参数)来调用
@@ -139,9 +141,8 @@ public class WebViewJSInterface
     @JavascriptInterface
     public long getCurrentTime()
     {
-        //long currentTime = (long) PrefsUtils.get(Params.LOCAL.CLICK_H5_SHORT_CUT, 1000L);
-      //  long currentTime = SPHelper.getLong(Params.LOCAL.CLICK_H5_SHORT_CUT, 1000L);
-        return System.currentTimeMillis();
+        long currentTime = SPHelper.getLong(Param.LOCAL.CLICK_H5_SHORT_CUT, 1000L);
+        return currentTime;
     }
 
 
@@ -151,13 +152,14 @@ public class WebViewJSInterface
     @JavascriptInterface
     public String getToken()
     {
-
-
-        // String token = (String) PrefsUtils.get(Params.LOCAL.TOKEN, "获取本地Token失败");
-        //跨进程调用,得不到token，就传空字符串，修复bug 2018-6-14
-       // String token = SPHelper.getString(Params.LOCAL.TOKEN, "");
-        return "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50IjoibHNtIiwiam9iQ29kZSI6IkoyMTA0ODgiLCJ1c2VySUQiOjYxNjgsIm5iZiI6MTU0NTQ0ODE3MywiaXNzdWUiOiJnb2xkTWFudGlzIiwiZXhwIjoxNTI5NzE5MjAwfQ.tqjGNc2F2WpNwcziGK4mNo-pfn7BSS_qat2ywqn4eqs";
-
+        String token = SPHelper.getString(Param.LOCAL.TOKEN, "");
+        return token;
+        
+    }
+    @JavascriptInterface
+    public void refreshToken()
+    {
+        SPHelper.save(Param.LOCAL.TOKEN, "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50IjoibHNtIiwiam9iQ29kZSI6IkoyMTA0ODgiLCJ1c2VySUQiOjYxNjgsIm5iZiI6MTU0NTc4ODUzMCwiaXNzdWUiOiJnb2xkTWFudGlzIiwiZXhwIjoxNTMwMDY0ODAwfQ.JsDnlfthLLKQnta_LsowfMnvrhCsMQtdeL4z16Vvud4");
     }
 
     

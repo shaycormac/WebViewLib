@@ -4,6 +4,7 @@ import android.app.Application;
 import android.app.DownloadManager;
 import android.content.IntentFilter;
 
+import com.assassin.webviewlibrary.provider.SPHelper;
 import com.assassin.webviewlibrary.receiver.DownloadReceiver;
 
 /**
@@ -22,6 +23,8 @@ public class WebViewApp extends Application
         super.onCreate();
         mReceiver = new DownloadReceiver();
         registerReceiver(mReceiver, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
+        //跨进数据共享
+        SPHelper.init(this);
     }
 
     @Override
